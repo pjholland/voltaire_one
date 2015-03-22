@@ -2,11 +2,12 @@ require_relative "../../lib/base_class"
 
 class Homepage < Baseclass
 
-  STORE_FINDER = { class: 'storefinder_link'     }
+  USER_EMAIL     = {id: 'UserEmail'}
+  USER_PASSWORD  = {id: 'UserPassword'}
+  SIGN_IN_BUTTON ={class: 'btn-primary'}
+  MAP_LINK       ={class: 'map-link'}
+
+
+
 end
-#
-#ELEMENT = {
-#
-#    "store_finder_link => "class: 'storefinder_link'"
-#
-#            }
+

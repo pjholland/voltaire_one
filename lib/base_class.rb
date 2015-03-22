@@ -2,6 +2,8 @@ class Baseclass
 
   attr_reader :browser
 
+  #access all methods webdriver "driver" class via @browser or via methods below
+
   def initialize(browser)
     @browser = browser
   end
@@ -35,6 +37,7 @@ class Baseclass
 
   def text_of(locator)
     find(locator).text
+    browser
   end
 
   def title
