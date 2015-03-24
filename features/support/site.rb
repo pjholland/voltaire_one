@@ -38,10 +38,6 @@ module Site
       @storefinder ||= Storefinder.new(@browser)
     end
 
-    def store_finder(browser)
-
-    end
-
   end
 
   def site

@@ -11,6 +11,12 @@ Then(/^I should see the correct elements$/) do
 
   site.homepage.find(Homepage::MAP_LINK).click
 
+end
+
+
+Then(/^I am able to log out$/) do
+
+  site.homepage.enabled?(Homepage::LOG_IN_LINK).should equal false
 
 end
 

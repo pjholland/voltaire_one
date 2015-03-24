@@ -30,9 +30,10 @@ class Baseclass
 
   def displayed?(locator)
     browser.find_element(locator).displayed?
-    true
-  rescue Selenium::WebDriver::Error::NoSuchElementError
-    false
+  end
+
+  def enabled?(locator)
+    browser.find_element(locator).enabled?
   end
 
   def text_of(locator)
