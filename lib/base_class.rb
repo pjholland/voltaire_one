@@ -45,6 +45,10 @@ class Baseclass
     browser.title
   end
 
+  def page_content
+    browser.page_source
+  end
+
   def wait_for(seconds=5)
     Selenium::WebDriver::Wait.new(:timeout => seconds).until { yield }
   end

@@ -47,4 +47,5 @@ DEPENDENCIES
   headless
   require_all
   rspec
+  rspec-expectations
   selenium-webdriver

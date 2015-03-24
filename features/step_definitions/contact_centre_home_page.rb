@@ -16,7 +16,13 @@ end
 
 Then(/^I am able to log out$/) do
 
-  site.homepage.enabled?(Homepage::LOG_IN_LINK).should equal false
+  site.homepage.enabled?(Homepage::LOG_IN_LINK).should equal true
+
+end
+
+Given(/^the page should have content "(.*?)"$/) do |text|
+
+  site.homepage.page_content.should include(text)
 
 end
 

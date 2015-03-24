@@ -9,4 +9,5 @@ Feature: Home Page
   @current
   Scenario: User is able to log out
     Given I log on to contact centre
+    And the page should have content "New Enquiry form"
     Then I am able to log out
