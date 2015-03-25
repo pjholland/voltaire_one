@@ -24,6 +24,8 @@ Given(/^the page should have content "(.*?)"$/) do |text|
 
   site.homepage.page_content.should include(text)
 
+  site.homepage.wait_for(1)
+
 end
 
 
