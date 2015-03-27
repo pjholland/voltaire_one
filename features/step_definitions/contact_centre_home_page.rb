@@ -28,4 +28,25 @@ Given(/^the page should have content "(.*?)"$/) do |text|
 
 end
 
+Given(/^I click the "(.*?)" link$/) do |link|
+  case link
+    when "admin"
+  site.homepage.find(Homepage::ADMIN_LINK).click
+  end
+end
+
+Then(/^I should see the admin options menu$/) do
+
+ site.homepage.find(Homepage::ADMIN_OPTIONS_MENU)
+
+end
+
+Given(/^I click on the call to drop down list box$/) do
+
+  site.homepage.click_within_drop_down_list(Homepage::ENQUIRY_TYPE_DROP_DOWN, 'Email')
+
+end
+
+
+
 

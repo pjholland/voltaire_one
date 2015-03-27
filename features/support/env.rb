@@ -9,7 +9,9 @@ require 'selenium-webdriver'
 require_rel '../../lib/pages/homepage'
 require_rel '../../lib/pages/storefinder'
 
-ENV['base_url'] = 'http://contactcentre.nightly.fco.clients.wtg.co.uk/users/login'
+#ENV['base_url'] = 'http://contactcentre.nightly.fco.clients.wtg.co.uk/users/login'
+
+ENV['base_url'] = 'https://uat.contactcentre.hub.fco.gov.uk/users/login'
 
 
 After do

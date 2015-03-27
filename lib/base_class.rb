@@ -36,9 +36,12 @@ class Baseclass
     browser.find_element(locator).enabled?
   end
 
-  def text_of(locator)
+  def selected?(locator)
+    browser.find_element(locator).selected?
+  end
+
+  def get_text_of(locator)
     find(locator).text
-    browser
   end
 
   def title
@@ -49,7 +52,20 @@ class Baseclass
     browser.page_source
   end
 
-  def web_driver_time_out(seconds=5)
+  def click_within_drop_down_list(locator, text)
+
+   element = browser.find_element(locator)
+   dropdown = Selenium::WebDriver::Support::Select.new(element)
+   dropdown.select_by(:text, text)
+
+  end
+
+  def get_attribute(name, locator)
+    browser.find_element(locator)
+    browser.attribute(name)
+  end
+
+  def new_web_driver_time_out(seconds=5)
     Selenium::WebDriver::Wait.new(:timeout => seconds).until { yield }
   end
 
