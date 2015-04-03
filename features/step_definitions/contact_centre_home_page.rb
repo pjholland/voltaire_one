@@ -47,6 +47,14 @@ Given(/^I click on the call to drop down list box$/) do
 
 end
 
+When(/^I go to the admin page$/) do
+
+  site.homepage.find_within_element('nav', 'Admin')
+
+end
+
+
+
 
 
 

@@ -69,6 +69,12 @@ class Baseclass
     Selenium::WebDriver::Wait.new(:timeout => seconds).until { yield }
   end
 
+  def find_within_element(parent, child)
+
+    browser.find_element(:class, parent).find_element(:link => child).click
+
+  end
+
   def wait_for(time)
 
     sleep(time)

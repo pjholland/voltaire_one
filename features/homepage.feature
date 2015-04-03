@@ -19,7 +19,8 @@ Feature: Home Page
   @current
   Scenario: click on drop list
     Given I log on to contact centre
-    And I click on the call to drop down list box
+    When I go to the admin page
+    #And I click on the call to drop down list box
 
 
 
